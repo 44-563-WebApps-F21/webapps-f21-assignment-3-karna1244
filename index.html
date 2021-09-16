@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        table, th, td {
+            border: 1px solid black; 
+            text-align: center;
+        }
+        </style>
 <title>My First Web Application</title>
 </head>
 <body>
@@ -37,6 +43,63 @@ From <b>shopping at the various markets</b>, to eating the local cuisine and wat
 <li>French Fries</li>
 <li>Cookies</li>
 </ul>
+<hr>
+
+<h4>Snacks and Drinks</h4>
+<table style="width: 40%;">
+<tr>
+    <th>Snacks/Drink</th>
+    <th>Location</th>
+    <th>Cost</th>
+</tr>
+<tr>
+    <td>Coke</td>
+    <td>walmart</td>
+    <td>2$</td>
+</tr>
+<tr>
+    <td>Fries</td>
+    <td>BurgerKing</td>
+    <td>5$</td>
+</tr>
+<tr>
+    <td>peanut</td>
+    <td>Hyvee</td>
+    <td>3$</td>
+</tr>
+</table>
+<p>Places i go to buy my favourite foods.</p>
+
+<hr>
+<h4>Geometry Elementary/Polygons</h4>
+<blockquote>
+A number of coplanar line segments, each connected end to end to form a closed shape
+</blockquote>
+<a href="https://www.mathopenref.com/polygon.html">Source</a> <br>
+
+<pre>int signed_area_parallelogram(point2d p1, point2d p2, point2d p3) {
+    return cross(p2 - p1, p3 - p2);
+}
+
+double triangle_area(point2d p1, point2d p2, point2d p3) {
+    return abs(signed_area_parallelogram(p1, p2, p3)) / 2.0;
+}
+
+bool clockwise(point2d p1, point2d p2, point2d p3) {
+    return signed_area_parallelogram(p1, p2, p3) < 0;
+}
+
+bool counter_clockwise(point2d p1, point2d p2, point2d p3) {
+    return signed_area_parallelogram(p1, p2, p3) > 0;
+
+}</pre>
+<a href="https://cp-algorithms.com/geometry/oriented-triangle-area.html">Source</a> <br>
+
+
+
+
 <a href="aboutme.html">AboutMe</a>
+
+
 </body>
 </html>
